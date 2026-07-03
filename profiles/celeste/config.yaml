@@ -1,0 +1,20 @@
+_config_version: 30
+default_provider: deepseek
+model:
+  base_url: https://api.deepseek.com/v1
+  deepseek:
+    default: deepseek-v4-pro
+  default: deepseek-v4-pro
+  provider: deepseek
+telegram:
+  extra:
+    rich_messages: true
+  reactions: false
+  require_mention: false
+platforms:
+  telegram:
+    enabled: true
+onboarding:
+  seen:
+    profile_build_offered: true
+    busy_input_prompt: true

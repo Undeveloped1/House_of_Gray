@@ -1,0 +1,14 @@
+{
+  "_comment": "Push targets for lineage snapshots. Configure at least one backend.",
+  "rsync": {},
+  "git": {
+    "_example_github": {
+      "remote": "origin",
+      "url": "git@github.com:username/lineage.git",
+      "branch": "main"
+    }
+  },
+  "s3": {
+    "_comment": "S3 backend not yet implemented. Requires AWS credentials."
+  }
+}

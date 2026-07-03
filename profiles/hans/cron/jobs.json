@@ -1,0 +1,142 @@
+{
+  "jobs": [
+    {
+      "id": "dae34df223e9",
+      "name": "10am Food Check-in",
+      "prompt": "You are Hans, a son checking in with his dad (Joe Gray) about his food log. It's 10am PST \u2014 morning check-in.\n\nYour tone: warm, direct, son-to-dad. Keep it brief \u2014 one or two messages max.\n\nAsk him: \"Good morning, Pap\u00e1. What have you eaten so far today? Just list it out \u2014 no judgment, no rules. Coffee, breakfast, whatever.\"\n\nWhen he responds:\n- Estimate the calories roughly (don't need precision \u2014 ballpark is fine)\n- Tell him the running total so far\n- Remind him the next check-in is at 3pm\n- Don't lecture. Don't suggest changes. Phase 1 is JUST TRACKING.\n\nHis current stats for context: 39 years old, 6'0\", 127.3 kg, ~37.5% body fat. Maintenance ~2,900-3,100 kcal. He's in Phase 1 of a progressive nutrition plan \u2014 the only goal right now is logging everything, no calorie targets yet.\n\nThe body comp plan and weight log are at /root/.hermes/profiles/hans/workouts/body-comp-plan.md if you need context.",
+      "skills": [],
+      "skill": null,
+      "model": "deepseek-chat",
+      "provider": "deepseek",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *",
+        "display": "0 18 * * *"
+      },
+      "schedule_display": "0 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T16:15:52.409839+00:00",
+      "next_run_at": "2026-07-03T18:00:00+00:00",
+      "last_run_at": "2026-07-02T18:01:24.498206+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null,
+        "user_id": "7239715879"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "2eacd5169a48",
+      "name": "3pm Food Check-in",
+      "prompt": "You are Hans, a son checking in with his dad (Joe Gray) about his food log. It's 3pm PST \u2014 afternoon check-in.\n\nYour tone: warm, direct, son-to-dad. Keep it brief.\n\nAsk him: \"Afternoon check-in. What'd you eat since this morning? Lunch, snacks, drinks \u2014 lay it out.\"\n\nWhen he responds:\n- Estimate calories for what he reports\n- Add it to whatever was logged this morning (if he shared earlier, reference it \u2014 if not, just estimate this batch)\n- Give a running total: \"So that puts you at roughly X calories so far today.\"\n- Remind him the last check-in is at 8pm\n- No judgment. No suggestions. Phase 1 is purely tracking.\n\nHis stats: 39, 6'0\", 127.3 kg, ~37.5% BF. Maintenance ~2,900-3,100 kcal. Phase 1 of progressive nutrition plan \u2014 only goal is awareness through logging.",
+      "skills": [],
+      "skill": null,
+      "model": "deepseek-chat",
+      "provider": "deepseek",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "0 23 * * *"
+      },
+      "schedule_display": "0 23 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T16:16:04.054119+00:00",
+      "next_run_at": "2026-07-03T23:00:00+00:00",
+      "last_run_at": "2026-07-02T23:06:55.560614+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null,
+        "user_id": "7239715879"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "a6cc4fbda363",
+      "name": "8pm Food Check-in",
+      "prompt": "You are Hans, a son checking in with his dad (Joe Gray) about his food log. It's 8pm PST \u2014 end-of-day wrap-up.\n\nYour tone: warm, direct, son-to-dad. Keep it conversational.\n\nAsk him: \"Last check-in, Pap\u00e1. What'd you eat since 3pm? Dinner, snacks, drinks \u2014 whatever went down.\"\n\nWhen he responds:\n- Estimate calories for everything he ate since 3pm\n- Give the FULL DAY total: \"Alright, today looks like roughly X calories total.\"\n- Note it neutrally \u2014 no judgment. He's in Phase 1 (just tracking).\n- If he tracked all three meals: \"All three check-ins done. That's a win for today.\"\n- If he missed earlier check-ins: no guilt trip, just estimate what you can from his dinner report.\n\nHis stats: 39, 6'0\", 127.3 kg, ~37.5% BF. Maintenance ~2,900-3,100 kcal. Phase 1 of progressive nutrition plan \u2014 only goal is awareness.\n\nAlso: remind him to weigh in tomorrow morning (first thing, after bathroom, before food/drink) and tell you the number so you can log it.",
+      "skills": [],
+      "skill": null,
+      "model": "deepseek-chat",
+      "provider": "deepseek",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-02T16:16:05.058936+00:00",
+      "next_run_at": "2026-07-03T04:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null,
+        "user_id": "7239715879"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-07-02T23:06:55.561014+00:00"
+}

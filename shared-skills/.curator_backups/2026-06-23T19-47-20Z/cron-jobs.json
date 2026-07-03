@@ -1,0 +1,210 @@
+{
+  "jobs": [
+    {
+      "id": "0a9cea1df251",
+      "name": "Hermes daily update",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "#!/usr/bin/env bash\nhermes update --yes && systemctl --user restart hermes-dashboard",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 16
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-07T16:44:31.404753+00:00",
+      "next_run_at": "2026-06-24T04:00:00+00:00",
+      "last_run_at": "2026-06-23T04:00:19.038602+00:00",
+      "last_status": "error",
+      "last_error": "Script not found: /root/.hermes/scripts/#!/usr/bin/env bash\nhermes update --yes && systemctl --user restart hermes-dashboard",
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null,
+      "fire_claim": null
+    },
+    {
+      "id": "b1d83bca8f5c",
+      "name": "Paul Session Backup",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "session_backup.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T04:13:23.574979+00:00",
+      "next_run_at": "2026-06-24T03:00:00+00:00",
+      "last_run_at": "2026-06-23T03:00:28.247960+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "000e01a13e17",
+      "name": "Daily Bible + Stoic",
+      "prompt": "# Daily Bible + Stoic Pairing\n\nFind one Bible verse and one Stoic quote or concept that pair together thematically. They should feel like they're answering the same question from two traditions. Then pose 2-3 probing questions for group reflection.\n\n## Format\n```\n## [Theme or Virtue]\n\n**Scripture:** \"[Verse text]\" \u2014 Book Chapter:Verse (translation)\n\n**Stoic:** \"[Quote or concept]\" \u2014 Author, Work\n\n*[One sentence on why these pair. No preaching. Just the thread.]*\n\n**Reflect:**\n- [Question that presses on application, not comprehension]\n- [Question that creates tension \u2014 is this always true? Where does it break?]\n- [Optional third question if the pairing warrants it]\n```\n\n## Quality Rules\n- **Pairing must click.** If it doesn't feel inevitable, pick a different verse.\n- **Questions probe, don't preach.** \"Where is this hardest for you?\" not \"We should all be more X.\" Create tension. Ask what breaks. Ask when the wisdom is wrong.\n- Vary themes day to day \u2014 courage, patience, humility, anger, death, gratitude, honesty, service, leadership, fear, wealth, silence, endurance, forgiveness, pride, justice, anxiety, ambition, reputation\n- Vary books \u2014 not just Psalms and Matthew. Pull from Proverbs, Ecclesiastes, Job, James, Isaiah, Romans, the minor prophets\n- Vary Stoics \u2014 Marcus Aurelius (Meditations), Seneca (Letters, On the Shortness of Life), Epictetus (Enchiridion, Discourses), Musonius Rufus\n- Avoid overused verses. No John 3:16. No \"memento mori\" every third day.\n- Use actual translations (ESV, NIV, NASB, KJV). Don't paraphrase scripture.\n- Whole thing should be about 2x the length of this prompt's example section.\n\n## Schedule\nDeliver daily at 14:00 UTC. Check session_search for previous devotionals to avoid repeats.\n",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 14 * * *",
+        "display": "0 14 * * *"
+      },
+      "schedule_display": "0 14 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-20T11:46:31.881518+00:00",
+      "next_run_at": "2026-06-24T14:00:00+00:00",
+      "last_run_at": "2026-06-23T14:01:02.902336+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:7239715879",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "565dbb348fca",
+      "name": "Rook DM \u2014 early flight Cabo Jun 30",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "rook-flight-cabo-2026-06-30.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 30 6 *",
+        "display": "0 9 30 6 *"
+      },
+      "schedule_display": "0 9 30 6 *",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-20T13:39:53.525213+00:00",
+      "next_run_at": "2026-06-30T09:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "28b1e8abe9a1",
+      "name": "abby-session-purge",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "abby_purge.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 5,
+        "display": "every 5m"
+      },
+      "schedule_display": "every 5m",
+      "repeat": {
+        "times": null,
+        "completed": 400
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-22T03:43:00.204088+00:00",
+      "next_run_at": "2026-06-23T19:47:21.494485+00:00",
+      "last_run_at": "2026-06-23T19:42:21.494485+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-06-23T19:42:21.494720+00:00"
+}

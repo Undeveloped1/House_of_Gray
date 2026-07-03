@@ -1,0 +1,17 @@
+# Never track secrets or env files
+.env
+*.env
+
+# Never track SSH private keys
+id_*
+*_deploy
+*_ed25519
+github_*
+
+# Never track DBs or cache
+*.db
+*.sqlite
+cache/
+logs/
+sessions/
+state/

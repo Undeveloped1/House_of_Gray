@@ -1,0 +1,227 @@
+{
+  "Version": "1.98.4-t9e69045b2-ged3a62f14",
+  "TUN": true,
+  "BackendState": "Running",
+  "HaveNodeKey": true,
+  "AuthURL": "",
+  "TailscaleIPs": [
+    "100.94.19.72",
+    "fd7a:115c:a1e0::a034:1348"
+  ],
+  "Self": {
+    "ID": "nE2yGRQZZ421CNTRL",
+    "PublicKey": "nodekey:b940214bac9d539c045a1118168b369df7f2c308bf1ec6c4987426f6a05e1347",
+    "HostName": "paul",
+    "DNSName": "paul.taila7ced5.ts.net.",
+    "OS": "linux",
+    "UserID": 2188030001628354,
+    "TailscaleIPs": [
+      "100.94.19.72",
+      "fd7a:115c:a1e0::a034:1348"
+    ],
+    "AllowedIPs": [
+      "100.94.19.72/32",
+      "fd7a:115c:a1e0::a034:1348/128"
+    ],
+    "Addrs": [
+      "2.25.163.205:41641",
+      "[2a02:4780:75:48d0::1]:41641",
+      "172.16.0.1:41641",
+      "172.16.1.1:41641",
+      "172.16.2.1:41641"
+    ],
+    "CurAddr": "",
+    "Relay": "nyc",
+    "PeerRelay": "",
+    "RxBytes": 0,
+    "TxBytes": 0,
+    "Created": "2026-06-02T21:36:04.062372171Z",
+    "LastWrite": "0001-01-01T00:00:00Z",
+    "LastSeen": "0001-01-01T00:00:00Z",
+    "LastHandshake": "0001-01-01T00:00:00Z",
+    "Online": true,
+    "ExitNode": false,
+    "ExitNodeOption": false,
+    "Active": false,
+    "PeerAPIURL": [
+      "http://100.94.19.72:53912",
+      "http://[fd7a:115c:a1e0::a034:1348]:40046"
+    ],
+    "TaildropTarget": 0,
+    "NoFileSharingReason": "",
+    "Capabilities": [
+      "HTTPS://TAILSCALE.COM/s/DEPRECATED-NODE-CAPS#see-https://github.com/tailscale/tailscale/issues/11508",
+      "default-auto-update",
+      "https://tailscale.com/cap/file-sharing",
+      "https://tailscale.com/cap/is-admin",
+      "https://tailscale.com/cap/is-owner",
+      "https://tailscale.com/cap/ssh",
+      "https://tailscale.com/cap/tailnet-lock",
+      "probe-udp-lifetime",
+      "ssh-behavior-v1",
+      "ssh-env-vars",
+      "store-appc-routes",
+      "tailnet-display-name"
+    ],
+    "CapMap": {
+      "default-auto-update": [
+        true
+      ],
+      "https://tailscale.com/cap/file-sharing": null,
+      "https://tailscale.com/cap/is-admin": null,
+      "https://tailscale.com/cap/is-owner": null,
+      "https://tailscale.com/cap/ssh": null,
+      "https://tailscale.com/cap/tailnet-lock": null,
+      "probe-udp-lifetime": null,
+      "ssh-behavior-v1": null,
+      "ssh-env-vars": null,
+      "store-appc-routes": null,
+      "tailnet-display-name": [
+        "joseph.s.grayii@gmail.com"
+      ]
+    },
+    "InNetworkMap": true,
+    "InMagicSock": false,
+    "InEngine": false,
+    "KeyExpiry": "2026-11-29T21:36:04Z"
+  },
+  "Health": [],
+  "MagicDNSSuffix": "taila7ced5.ts.net",
+  "CurrentTailnet": {
+    "Name": "joseph.s.grayii@gmail.com",
+    "MagicDNSSuffix": "taila7ced5.ts.net",
+    "MagicDNSEnabled": true
+  },
+  "CertDomains": null,
+  "Peer": {
+    "nodekey:65029dea51d5152ee77ba1fccd52181a65658b8dddfe06ee8b3417641efa306c": {
+      "ID": "nXfYPaGgEB21CNTRL",
+      "PublicKey": "nodekey:65029dea51d5152ee77ba1fccd52181a65658b8dddfe06ee8b3417641efa306c",
+      "HostName": "NAUTILUS-3",
+      "DNSName": "nautilus-3.taila7ced5.ts.net.",
+      "OS": "windows",
+      "UserID": 2188030001628354,
+      "TailscaleIPs": [
+        "100.122.48.109",
+        "fd7a:115c:a1e0::1e34:306d"
+      ],
+      "AllowedIPs": [
+        "100.122.48.109/32",
+        "fd7a:115c:a1e0::1e34:306d/128"
+      ],
+      "Addrs": null,
+      "CurAddr": "[2605:59c0:421d:6e08:4561:bbb7:1f1e:7643]:41641",
+      "Relay": "lax",
+      "PeerRelay": "",
+      "RxBytes": 16539204,
+      "TxBytes": 608511164,
+      "Created": "2026-06-02T21:38:16.997350047Z",
+      "LastWrite": "2026-07-03T01:47:33.674706387Z",
+      "LastSeen": "0001-01-01T00:00:00Z",
+      "LastHandshake": "2026-07-03T01:46:27.638607878Z",
+      "Online": true,
+      "ExitNode": false,
+      "ExitNodeOption": false,
+      "Active": true,
+      "PeerAPIURL": [
+        "http://100.122.48.109:40834",
+        "http://[fd7a:115c:a1e0::1e34:306d]:48968"
+      ],
+      "TaildropTarget": 1,
+      "NoFileSharingReason": "",
+      "InNetworkMap": true,
+      "InMagicSock": true,
+      "InEngine": true,
+      "KeyExpiry": "2026-11-29T21:38:16Z"
+    },
+    "nodekey:ab5836f995e8a5873a954b90489818ddb63a1a6b37ce60588b7a6af1133ebf11": {
+      "ID": "ncnvX2VB9821CNTRL",
+      "PublicKey": "nodekey:ab5836f995e8a5873a954b90489818ddb63a1a6b37ce60588b7a6af1133ebf11",
+      "HostName": "Jos’s MacBook Air",
+      "DNSName": "joss-macbook-air.taila7ced5.ts.net.",
+      "OS": "macOS",
+      "UserID": 2188030001628354,
+      "TailscaleIPs": [
+        "100.126.191.18",
+        "fd7a:115c:a1e0::1334:bf12"
+      ],
+      "AllowedIPs": [
+        "100.126.191.18/32",
+        "fd7a:115c:a1e0::1334:bf12/128"
+      ],
+      "Addrs": null,
+      "CurAddr": "",
+      "Relay": "lax",
+      "PeerRelay": "",
+      "RxBytes": 0,
+      "TxBytes": 0,
+      "Created": "2026-06-02T21:40:42.233896558Z",
+      "LastWrite": "2026-06-28T21:16:05.062932631Z",
+      "LastSeen": "2026-07-03T01:40:00.1Z",
+      "LastHandshake": "0001-01-01T00:00:00Z",
+      "Online": false,
+      "ExitNode": false,
+      "ExitNodeOption": false,
+      "Active": false,
+      "PeerAPIURL": [
+        "http://100.126.191.18:57207",
+        "http://[fd7a:115c:a1e0::1334:bf12]:55137"
+      ],
+      "TaildropTarget": 5,
+      "NoFileSharingReason": "",
+      "InNetworkMap": true,
+      "InMagicSock": true,
+      "InEngine": false,
+      "KeyExpiry": "2026-11-29T21:40:42Z"
+    },
+    "nodekey:eb62999b1c7b5df29b18ac5c341bd7a597b2b7efab3dca9d7d1bd6f8aa6c2553": {
+      "ID": "nB1oUHEYe621CNTRL",
+      "PublicKey": "nodekey:eb62999b1c7b5df29b18ac5c341bd7a597b2b7efab3dca9d7d1bd6f8aa6c2553",
+      "HostName": "localhost",
+      "DNSName": "iphone182.taila7ced5.ts.net.",
+      "OS": "iOS",
+      "UserID": 2188030001628354,
+      "TailscaleIPs": [
+        "100.108.37.83",
+        "fd7a:115c:a1e0::aa34:2554"
+      ],
+      "AllowedIPs": [
+        "100.108.37.83/32",
+        "fd7a:115c:a1e0::aa34:2554/128"
+      ],
+      "Addrs": null,
+      "CurAddr": "",
+      "Relay": "lax",
+      "PeerRelay": "",
+      "RxBytes": 0,
+      "TxBytes": 0,
+      "Created": "2026-07-02T19:16:48.502370585Z",
+      "LastWrite": "0001-01-01T00:00:00Z",
+      "LastSeen": "2026-07-03T01:40:00.1Z",
+      "LastHandshake": "0001-01-01T00:00:00Z",
+      "Online": true,
+      "ExitNode": false,
+      "ExitNodeOption": false,
+      "Active": false,
+      "PeerAPIURL": [
+        "http://100.108.37.83:48127",
+        "http://[fd7a:115c:a1e0::aa34:2554]:53588"
+      ],
+      "TaildropTarget": 1,
+      "NoFileSharingReason": "",
+      "InNetworkMap": true,
+      "InMagicSock": true,
+      "InEngine": false,
+      "KeyExpiry": "2026-12-29T19:16:48Z"
+    }
+  },
+  "User": {
+    "2188030001628354": {
+      "ID": 2188030001628354,
+      "LoginName": "joseph.s.grayii@gmail.com",
+      "DisplayName": "Joseph Gray II",
+      "ProfilePicURL": "https://lh3.googleusercontent.com/a/ACg8ocJcdFwwzWIHm8wJt8X89P64H33W2gDNRbblv6_SzY4A2TL5GaQS=s96-c"
+    }
+  },
+  "ClientVersion": null
+}

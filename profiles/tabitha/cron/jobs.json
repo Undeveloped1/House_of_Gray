@@ -1,0 +1,141 @@
+{
+  "jobs": [
+    {
+      "id": "tabitha-bible-stoic",
+      "name": "Daily Bible + Stoic",
+      "prompt": "**CRITICAL: Your response is ONLY the devotional below \u2014 nothing else. No verification, no checks, no \"here's your,\" no meta-text.**\n\nFind one Bible verse and one Stoic quote or concept that pair thematically. They should feel like they're answering the same question from two traditions. Then pose 2-3 probing questions for group reflection.\n\n## Format \u2014 EXACTLY:\n\n## [Theme or Virtue]\n\n**Scripture:** \"[Verse text]\" \u2014 Book Chapter:Verse (translation)\n\n**Stoic:** \"[Quote or concept]\" \u2014 Author, Work\n\n*[One sentence on why these pair. No preaching. Just the thread.]*\n\n**Reflect:**\n- [Question that presses on application, not comprehension]\n- [Question that creates tension \u2014 is this always true? Where does it break?]\n- [Optional third question if warranted]\n\n## Quality Rules\n- Pairing must click. If it doesn't feel inevitable, pick a different verse.\n- Questions probe, don't preach. Create tension.\n- Vary themes. Vary books. Vary Stoics.\n- Avoid overused verses.\n- Use actual translations (ESV, NIV, NASB, KJV). Don't paraphrase.",
+      "skills": [],
+      "skill": null,
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 11 * * *",
+        "display": "0 11 * * *"
+      },
+      "schedule_display": "0 11 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "deliver": "telegram:7239715879",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "fire_claim": null,
+      "next_run_at": "2026-07-03T11:00:00+00:00",
+      "last_run_at": "2026-07-02T11:01:18.383956+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null
+    },
+    {
+      "id": "bdb746cbf316",
+      "name": "Bible Devotional Archive",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "bible-devotional-archive.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 11 * * *",
+        "display": "5 11 * * *"
+      },
+      "schedule_display": "5 11 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-01T00:32:16.994278+00:00",
+      "next_run_at": "2026-07-03T11:05:00+00:00",
+      "last_run_at": "2026-07-02T11:05:40.160322+00:00",
+      "last_status": "error",
+      "last_error": "Script not found: /root/.hermes/profiles/tabitha/scripts/bible-devotional-archive.py",
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null,
+        "user_id": "7239715879"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "66bb141e4723",
+      "name": "Daily Autobiography Prompts",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "autobiography-daily-tabitha.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 5
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-01T00:33:51.271395+00:00",
+      "next_run_at": "2026-07-03T12:00:00+00:00",
+      "last_run_at": "2026-07-02T12:00:41.024293+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:7239715879",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "7239715879",
+        "chat_name": "Joe Gray",
+        "thread_id": null,
+        "user_id": "7239715879"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-07-02T12:00:41.024706+00:00"
+}

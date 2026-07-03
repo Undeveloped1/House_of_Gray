@@ -1,0 +1,124 @@
+# Pipeline Spec Template
+# Copy this file and fill in the blanks.
+# Consumed by the orchestrator skill (creative/orchestrator).
+
+pipeline: <pipeline-name>
+description: >
+  One-sentence description of what this pipeline produces.
+  Include faction name, output type, and expected quality target.
+
+# ── Pre-Phase (manual) ───────────────────────────────────────────
+# Document what must exist before the orchestrator can run.
+# The orchestrator checks for this file before Phase 1.
+pre_phase:
+  name: spec-lock
+  manual: true
+  deliverable: workspace/<Faction>_Spec.md
+  description: >
+    Joe and Paul collaboratively lock: crew CAN/CANNOT profiles,
+    Living World anchors, archetype turn maps, density targets,
+    slot table, sub-agent instructions, naming conventions.
+    Cross-reference all crew profiles against the locked function
+    registry before declaring the spec locked.
+
+# ── Automated Phases ─────────────────────────────────────────────
+
+phases:
+  # Phase 1: Validate the spec before any cards are designed.
+  # This is the highest-leverage step — one worker catches
+  # contradictions that prevent 55 cards of rework.
+  - name: spec-validate
+    workers: 1
+    worker_prompt: |
+      Read the spec file at {spec_path}.
+      Also read these locked reference documents:
+      - <full path to function registry>
+      - <full path to build facts>
+      - <full path to synergy web and keyword sidebar>
+
+      Validate:
+      - Crew profiles match the locked function registry
+      - Slot table math: crew budgets, rarity caps, V-band totals
+      - Crew bleed: check every CANNOT against all mechanics
+      - Pathway coverage: every pathway has cards at every V-band
+      - Edge coverage: every synergy edge has ≥2 cards
+      - Naming conventions explicitly stated
+
+      Report ALL blocking errors with severity (Critical/Major/Minor).
+      Output to: {artifact_dir}/spec-validate/iter-1/report.md
+    worker_toolsets: ['file']
+    critic_prompt: |
+      Review the validation report at {artifact_dir}/spec-validate/iter-1/report.md.
+      Verify every claimed error against the source documents.
+      Check for false positives. Verify crew bleed claims cite correct boundaries.
+      Output: PASS/FAIL with severity-graded findings.
+      Output to: {artifact_dir}/spec-validate/iter-1/critic-report.md
+    max_iterations: 2
+
+  # Phase 2: Parallel card design split by V-band.
+  # Only run after spec-validate passes clean.
+  - name: card-design
+    workers: 3
+    split_by: V-band
+    split_map:
+      "1V-2V": 20
+      "3V-4V": 22
+      "5V-6V": 13
+    worker_prompt: |
+      Read the spec at {spec_path}.
+      Read the function registry and keyword sidebar at:
+      - <full path to function registry>
+      - <full path to keyword sidebar>
+
+      Design cards for V-band {band}. Target {count} cards.
+
+      CREW RULES (from spec):
+      - <crew>: CAN <abilities>. CANNOT <abilities>.
+      - <repeat for each crew>
+
+      NAMING CONVENTIONS:
+      - Professionals: epithets/role-names ONLY. NO SURNAMES.
+
+      FORMAT: Fixed-width monospaced columns per design-collaboration skill.
+
+      Output to: {artifact_dir}/card-design/iter-1/batch-{band}.md
+    worker_toolsets: ['file']
+    pre_gate: pre_review_audit.py
+    pre_gate_path: ~/.hermes/skills/faction-set-review/scripts/pre_review_audit.py
+    pre_gate_target: "{artifact_dir}/card-design/iter-1/assembled.md"
+    critic: faction-set-review
+    critic_start_pass: 2
+    critic_prompt: |
+      Review the assembled set at {assembled_path}.
+      Start at Pass 2 — Pass 1 verified by pre_review_audit.py.
+      Be ruthless. Severity-grade all findings. Return letter grade.
+      Output to: {artifact_dir}/card-design/iter-{N}/critic-report.md
+    max_iterations: 3
+
+  # Phase 3: Apply critic fixes and final polish.
+  - name: polish
+    workers: 1
+    worker_prompt: |
+      Read the assembled set and critic report.
+      Apply ALL Critical and Major fixes. Do NOT redesign cards that passed.
+      Re-run pre_review_audit.py after fixes.
+      Output to: {artifact_dir}/polish/iter-1/assembled.md
+    worker_toolsets: ['file', 'terminal']
+    critic_prompt: |
+      Run multi-perspective review: Tone, Design, Identity, Flavor, Digital-Native.
+      Output to: {artifact_dir}/polish/iter-{N}/critic-report.md
+    max_iterations: 2
+
+# ── Escalation ───────────────────────────────────────────────────
+
+escalation:
+  delta_floor: 0.05
+  cross_model:
+    - <model-for-taste-review>
+  surface_to: joe
+  max_total_iterations: 8
+
+# ── Meta ─────────────────────────────────────────────────────────
+
+meta:
+  meta_critic_enabled: true

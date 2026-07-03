@@ -1,0 +1,13 @@
+model:
+  deepseek:
+    default: deepseek-v4-pro
+  default: deepseek-v4-pro
+  provider: deepseek
+command_allowlist:
+  - delete in root path
+onboarding:
+  seen:
+    profile_build_offered: true
+    busy_input_prompt: true
+_config_version: 31
+default_provider: deepseek

@@ -1,0 +1,54 @@
+{
+  "hermes-agent": {
+    "archived_at": null,
+    "created_at": "2026-07-01T00:40:02.218224+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-01T00:40:02.220069+00:00",
+    "last_viewed_at": "2026-07-01T00:40:02.218239+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "hermes-identity-files": {
+    "archived_at": null,
+    "created_at": "2026-07-01T00:40:15.877092+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-07-01T00:41:58.325601+00:00",
+    "last_used_at": "2026-07-01T00:54:08.123437+00:00",
+    "last_viewed_at": "2026-07-01T00:54:08.121886+00:00",
+    "patch_count": 3,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
+  },
+  "plan": {
+    "archived_at": null,
+    "created_at": "2026-07-02T17:26:32.220443+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-02T17:26:32.222119+00:00",
+    "last_viewed_at": "2026-07-02T17:26:32.220457+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "tabitha-autobiography": {
+    "archived_at": null,
+    "created_at": "2026-07-01T00:54:33.040644+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-07-02T17:28:23.799322+00:00",
+    "last_used_at": "2026-07-02T13:06:24.648618+00:00",
+    "last_viewed_at": "2026-07-02T13:06:24.647288+00:00",
+    "patch_count": 12,
+    "pinned": false,
+    "state": "active",
+    "use_count": 8,
+    "view_count": 8
+  }
+}
